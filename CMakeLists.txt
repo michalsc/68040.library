@@ -4,6 +4,9 @@ project(68040 VERSION 1.3.0)
 include(cmake/verstring.cmake)
 get_verstring(VERSTRING)
 
+if(NOT TARGET devicetree)
+    add_subdirectory(devicetree.resource EXCLUDE_FROM_ALL)
+endif()
 
 add_executable(68040.library
     src/main.c
