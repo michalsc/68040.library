@@ -1,0 +1,3 @@
+[submodule "devicetree.resource"]
+	path = devicetree.resource
+	url = https://github.com/michalsc/devicetree.resource.git
