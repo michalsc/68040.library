@@ -6,7 +6,11 @@
 # with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 function(sfdc SFD_FILE)
-    
+    make_directory(${CMAKE_CURRENT_BINARY_DIR}/includes/clib)
+    make_directory(${CMAKE_CURRENT_BINARY_DIR}/includes/pragmas)
+    make_directory(${CMAKE_CURRENT_BINARY_DIR}/includes/proto)
+    make_directory(${CMAKE_CURRENT_BINARY_DIR}/includes/inline)
+
     get_filename_component(LIB_NAME_FULL ${SFD_FILE} NAME_WLE)
     string(REGEX REPLACE "_lib$" "" LIB_NAME ${LIB_NAME_FULL})
 
