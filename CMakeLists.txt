@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.14.0)
 project(68040 VERSION 1.3.0)
 
+include(cmake/bin2h.cmake)
 include(cmake/verstring.cmake)
 get_verstring(VERSTRING)
 
@@ -14,6 +15,8 @@ add_executable(68040.library
     src/cachepredma.c
     src/cachepostdma.c
 )
+
+bin_to_header(68040.library)
 
 target_compile_options(68040.library PRIVATE -Os -m68040 -msmall-code -mregparm=4 -fomit-frame-pointer)
 target_compile_definitions(68040.library PRIVATE  VERSION_STRING="${VERSTRING}")
