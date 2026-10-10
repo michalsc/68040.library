@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14.0)
-project(68040 VERSION 1.3.0)
+project(68040 VERSION 2.0.0)
 
 include(cmake/bin2h.cmake)
 include(cmake/verstring.cmake)
